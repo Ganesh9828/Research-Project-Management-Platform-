@@ -1,0 +1,52 @@
+@startuml
+class User {
+    +String fullName
+    +String email
+    +String password
+    +String role
+    +List<String> interests
+}
+
+class Appointment {
+    +String id
+    +String teacherId
+    +String studentId
+    +Date date
+}
+
+class Completion {
+    +String userId
+    +String courseId
+    +Date completionDate
+    +String status
+}
+
+class Course {
+    +String id
+    +String title
+    +String description
+}
+
+class Engagement {
+    +String userId
+    +String courseId
+    +Number engagementTime
+    +Date engagementDate
+}
+
+class AnalyticsService {
+    +getAnalyticsData(): Object
+}
+
+class InterestMappingService {
+    +mapInterests(users: List<User>): Object
+}
+
+User "1" -- "0..*" Appointment : has
+User "1" -- "0..*" Completion : completes
+User "1" -- "0..*" Engagement : engages
+Course "1" -- "0..*" Completion : has
+Course "1" -- "0..*" Engagement : has
+AnalyticsService "1" -- "0..*" User : aggregates
+InterestMappingService "1" -- "0..*" User : maps
+@enduml

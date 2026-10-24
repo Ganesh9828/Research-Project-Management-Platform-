@@ -1,0 +1,34 @@
+ER Diagram for AcadSify Application
+
+[Entities]
+1. User
+   - Attributes: user_id (PK), full_name, email, password, role
+   - Relationships: One-to-Many with Appointment, Assignment, Meeting
+
+2. Appointment
+   - Attributes: appointment_id (PK), student_id (FK), teacher_id (FK), date, status
+   - Relationships: Many-to-One with User (Student), Many-to-One with User (Teacher)
+
+3. Assignment
+   - Attributes: assignment_id (PK), teacher_id (FK), title, description, due_date, status
+   - Relationships: Many-to-One with User (Teacher), One-to-Many with Submission
+
+4. Submission
+   - Attributes: submission_id (PK), assignment_id (FK), student_id (FK), file_path, grade
+   - Relationships: Many-to-One with Assignment, Many-to-One with User (Student)
+
+5. Meeting
+   - Attributes: meeting_id (PK), organizer_id (FK), title, description, date, duration
+   - Relationships: Many-to-One with User (Organizer), Many-to-Many with User (Participants)
+
+6. Notification
+   - Attributes: notification_id (PK), user_id (FK), message, timestamp, status
+   - Relationships: Many-to-One with User
+
+[Relationships]
+1. User - Appointment: A user (student) can have many appointments, and a user (teacher) can have many appointments
+2. User - Assignment: A user (teacher) can create many assignments
+3. Assignment - Submission: An assignment can have many submissions
+4. User - Submission: A user (student) can submit many assignments
+5. User - Meeting: A user can organize many meetings and participate in many meetings
+6. User - Notification: A user can receive many notifications

@@ -1,0 +1,52 @@
+Level-1 DFD for AcadSify Application
+
+[Authentication System]
+1. User Registration
+2. User Login
+3. Role Verification
+
+[Appointment Management]
+1. Appointment Request (Student)
+2. Appointment Approval/Rejection (Teacher)
+3. Appointment Scheduling
+4. Appointment Reminders
+
+[Assignment Management]
+1. Assignment Creation (Teacher)
+2. Assignment Submission (Student)
+3. Assignment Grading (Teacher)
+4. Assignment Feedback
+
+[Meeting Management]
+1. Meeting Scheduling
+2. Meeting Invitations
+3. Meeting Attendance Tracking
+4. Meeting Notes Management
+
+[Notification System]
+1. System Notifications
+2. Appointment Notifications
+3. Assignment Notifications
+4. Meeting Notifications
+
+[Analytics System]
+1. User Activity Tracking
+2. Performance Metrics
+3. Engagement Analysis
+4. Report Generation
+
+[Data Stores]
+1. User Database
+2. Appointment Database
+3. Assignment Database
+4. Meeting Database
+5. Notification Database
+6. Analytics Database
+
+[Data Flows]
+1. Authentication System <-> User Database
+2. Appointment Management <-> Appointment Database
+3. Assignment Management <-> Assignment Database
+4. Meeting Management <-> Meeting Database
+5. Notification System <-> Notification Database
+6. Analytics System <-> Analytics Database

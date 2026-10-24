@@ -1,0 +1,356 @@
+@startuml
+title User Registration Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Fill registration form
+Frontend -> Backend: Send registration data
+Backend -> Database: Save user data
+Database --> Backend: Confirmation of user creation
+Backend --> Frontend: Success response
+Frontend --> User: Display success message
+@enduml
+
+@startuml
+title User Login Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Fill login form
+Frontend -> Backend: Send login credentials
+Backend -> Database: Verify user credentials
+Database --> Backend: Return user data
+Backend --> Frontend: Success response with user data
+Frontend --> User: Display user dashboard
+@enduml
+
+@startuml
+title Appointment Scheduling Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Fill appointment form
+Frontend -> Backend: Send appointment details
+Backend -> Database: Save appointment data
+Database --> Backend: Confirmation of appointment creation
+Backend --> Frontend: Success response
+Frontend --> User: Display appointment confirmation
+@enduml
+
+@startuml
+title Task Completion Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Mark task as completed
+Frontend -> Backend: Send completion data
+Backend -> Database: Update task completion status
+Database --> Backend: Confirmation of update
+Backend --> Frontend: Success response
+Frontend --> User: Display completion confirmation
+@enduml
+
+@startuml
+title Engagement Tracking Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Track engagement
+Frontend -> Backend: Send engagement data
+Backend -> Database: Save engagement details
+Database --> Backend: Confirmation of engagement save
+Backend --> Frontend: Success response
+Frontend --> User: Display engagement confirmation
+@enduml
+
+@startuml
+title Student-Teacher Mapping Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+User -> Frontend: Trigger student-teacher mapping
+Frontend -> Backend: Request mapping of users
+Backend -> Database: Retrieve all users
+Database --> Backend: Return user data
+Backend -> Backend: Process mapping using mapInterests
+Backend --> Frontend: Return mapping results
+Frontend --> User: Display student-teacher mappings
+@enduml
+
+@startuml
+title Update User Role Sequence Diagram
+actor Admin
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Admin -> Frontend: Select user to update role
+Frontend -> Backend: Send update role request
+Backend -> Database: Update user role
+Database --> Backend: Confirmation of role update
+Backend --> Frontend: Success response
+Frontend --> Admin: Display updated user information
+@enduml
+
+@startuml
+title Delete User Sequence Diagram
+actor Admin
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Admin -> Frontend: Select user to delete
+Frontend -> Backend: Send delete user request
+Backend -> Database: Delete user
+Database --> Backend: Confirmation of user deletion
+Backend --> Frontend: Success response
+Frontend --> Admin: Display user deletion confirmation
+@enduml
+
+@startuml
+title Online Meeting Workflow Sequence Diagram
+actor User
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+participant "Meeting Platform" as MeetingPlatform
+
+User -> Frontend: Initiate meeting scheduling
+Frontend -> User: Collect meeting details
+Frontend -> Backend: Send meeting details
+Backend -> Database: Save meeting details
+Backend -> MeetingPlatform: Create online meeting
+MeetingPlatform --> Backend: Return meeting link
+Backend --> Frontend: Send confirmation
+Frontend --> User: Display meeting details and link
+@enduml
+
+@startuml
+title Course Enrollment Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Select course to enroll
+Frontend -> Backend: Send enrollment request
+Backend -> Database: Save enrollment data
+Database --> Backend: Confirmation of enrollment
+Backend --> Frontend: Success response
+Frontend --> Student: Display enrollment confirmation
+@enduml
+
+@startuml
+title Assignment Submission Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Upload assignment
+Frontend -> Backend: Send assignment data
+Backend -> Database: Save assignment submission
+Database --> Backend: Confirmation of submission
+Backend --> Frontend: Success response
+Frontend --> Student: Display submission confirmation
+@enduml
+
+@startuml
+title Quiz & Test Participation Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Start quiz/test
+Frontend -> Backend: Request quiz/test data
+Backend -> Database: Retrieve quiz/test details
+Database --> Backend: Return quiz/test data
+Backend --> Frontend: Send quiz/test to student
+Frontend --> Student: Display quiz/test
+Student -> Frontend: Submit quiz/test answers
+Frontend -> Backend: Send answers
+Backend -> Database: Save quiz/test results
+Database --> Backend: Confirmation of save
+Backend --> Frontend: Success response
+Frontend --> Student: Display results
+@enduml
+
+@startuml
+title Resource Access Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Request to access resource
+Frontend -> Backend: Send resource request
+Backend -> Database: Retrieve resource details
+Database --> Backend: Return resource data
+Backend --> Frontend: Send resource to student
+Frontend --> Student: Display resource
+@enduml
+
+@startuml
+title Task Management Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Create a new task
+Frontend -> Backend: Send task details
+Backend -> Database: Save task data
+Database --> Backend: Confirmation of task creation
+Backend --> Frontend: Success response
+Frontend --> Student: Display task confirmation
+@enduml
+
+@startuml
+title Forum Participation Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Post a question or reply
+Frontend -> Backend: Send forum post data
+Backend -> Database: Save forum post
+Database --> Backend: Confirmation of save
+Backend --> Frontend: Success response
+Frontend --> Student: Display updated forum
+@enduml
+
+@startuml
+title Progress Dashboard Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Request progress dashboard
+Frontend -> Backend: Send request for progress data
+Backend -> Database: Retrieve user progress data
+Database --> Backend: Return progress data
+Backend --> Frontend: Send progress dashboard data
+Frontend --> Student: Display progress dashboard
+@enduml
+
+@startuml
+title Profile Management Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Request to update profile
+Frontend -> Backend: Send updated profile data
+Backend -> Database: Update user profile
+Database --> Backend: Confirmation of update
+Backend --> Frontend: Success response
+Frontend --> Student: Display updated profile
+@enduml
+
+@startuml
+title Notification System Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Request notifications
+Frontend -> Backend: Send request for notifications
+Backend -> Database: Retrieve notifications
+Database --> Backend: Return notifications
+Backend --> Frontend: Send notifications to student
+Frontend --> Student: Display notifications
+@enduml
+
+@startuml
+title Bookmarking & Favorites Sequence Diagram
+actor Student
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Student -> Frontend: Bookmark a resource
+Frontend -> Backend: Send bookmark request
+Backend -> Database: Save bookmark data
+Database --> Backend: Confirmation of save
+Backend --> Frontend: Success response
+Frontend --> Student: Display bookmark confirmation
+@enduml
+
+@startuml
+title Student Performance Tracking Sequence Diagram
+actor Faculty
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Faculty -> Frontend: Request student performance data
+Frontend -> Backend: Send request for performance tracking
+Backend -> Database: Retrieve student performance data
+Database --> Backend: Return performance data
+Backend --> Frontend: Send performance data to faculty
+Frontend --> Faculty: Display student performance dashboard
+@enduml
+
+@startuml
+title Assignment Creation Sequence Diagram
+actor Faculty
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Faculty -> Frontend: Create or update assignment
+Frontend -> Backend: Send assignment details
+Backend -> Database: Save assignment data
+Database --> Backend: Confirmation of save
+Backend --> Frontend: Success response
+Frontend --> Faculty: Display assignment management confirmation
+@enduml
+
+@startuml
+title Quiz & Test Management Sequence Diagram
+actor Faculty
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Faculty -> Frontend: Create or update quiz/test
+Frontend -> Backend: Send quiz/test details
+Backend -> Database: Save quiz/test data
+Database --> Backend: Confirmation of save
+Backend --> Frontend: Success response
+Frontend --> Faculty: Display quiz/test management confirmation
+@enduml
+
+@startuml
+title Content Moderation Sequence Diagram
+actor Admin
+participant "Frontend" as Frontend
+participant "Backend" as Backend
+participant "Database" as Database
+
+Admin -> Frontend: Review content
+Frontend -> Backend: Send moderation request
+Backend -> Database: Update content status
+Database --> Backend: Confirmation of update
+Backend --> Frontend: Success response
+Frontend --> Admin: Display moderation confirmation
+@enduml
+
+@enduml

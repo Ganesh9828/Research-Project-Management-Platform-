@@ -1,0 +1,189 @@
+{
+  "Computer Science & Interdisciplinary Tech": {
+    "AI & Machine Learning": {
+      "Multimodal Learning": [],
+      "Neuro-Symbolic AI": [],
+      "AI in Healthcare": [
+        "Disease Prediction",
+        "Medical Image Segmentation",
+        "Virtual Diagnosis Assistants"
+      ],
+      "AI for Social Good": [
+        "Disaster Relief",
+        "Poverty Prediction",
+        "Misinformation Detection"
+      ],
+      "Reinforcement Learning Subtypes": [
+        "Multi-agent RL",
+        "Deep Q-Networks (DQN)",
+        "Proximal Policy Optimization (PPO)"
+      ],
+      "Generative AI": [
+        "AI Music Generation",
+        "Text-to-Video synthesis",
+        "Text-to-3D modeling"
+      ],
+      "AI for Code Generation": [
+        "Program Synthesis",
+        "Automated Debugging",
+        "Code Completion AI"
+      ],
+      "Knowledge Graphs & Semantic Web": [
+        "Ontology Engineering",
+        "Linked Data",
+        "RDF and SPARQL Querying"
+      ],
+      "Edge AI": ["TinyML", "On-device Machine Learning"],
+      "Time Series Analysis": [
+        "Forecasting Models",
+        "Anomaly Detection in IoT",
+        "Financial Time Series Modeling"
+      ],
+      "AI in Law and Legal Tech": [
+        "Contract Analysis",
+        "Legal Outcome Prediction",
+        "Case Similarity Matching"
+      ]
+    }
+  },
+  "Electronics / Instrumentation / Embedded": {
+    "Healthcare & Assistive Tech": {
+      "Smart Prosthetics": [],
+      "Brain-Computer Interfaces (BCI)": [],
+      "Wearable Health Monitoring Devices": []
+    },
+    "Nano and Smart Systems": {
+      "Energy Harvesting Systems": [],
+      "Bio-MEMS and Nanoelectronics": [],
+      "Smart Sensors & Sensor Fusion": [],
+      "Flexible Electronics": []
+    },
+    "Robotics & Embedded": {
+      "Robotic Arms & Grippers": ["Tactile Feedback"],
+      "Signal Compression & Encryption": [],
+      "Remote Device Calibration Systems": []
+    }
+  },
+  "Mechanical / Mechatronics": {
+    "Robotics": {
+      "Soft Robotics": [],
+      "Swarm Robotics": [],
+      "Exoskeleton Design": [],
+      "Autonomous Drones": [],
+      "Robotic Process Automation (RPA)": []
+    },
+    "Bio-mechanics": {
+      "Biomechanics & Prosthetic Design": []
+    },
+    "Energy & Systems": {
+      "Noise & Vibration Analysis": [],
+      "Smart HVAC Systems": [],
+      "Sustainable Refrigeration Systems": []
+    }
+  },
+  "Civil / Environmental / Architecture": {
+    "Green & Smart Cities": {
+      "Green Building Technologies": [],
+      "Rainwater Harvesting Automation": [],
+      "Building Energy Management Systems (BEMS)": [],
+      "3D Concrete Printing": [],
+      "Earthquake-Resistant Structural Design": [],
+      "Permeable Pavement Technologies": [],
+      "Vertical Farming Infrastructure": [],
+      "Urban Heat Island Mitigation": []
+    }
+  },
+  "Mathematics / Applied Math": {
+    "Advanced Mathematical Studies": {
+      "Fractal Geometry": [],
+      "Mathematical Cryptanalysis": [],
+      "Chaos Theory": [],
+      "Wavelet Transforms": [],
+      "Actuarial Science": [],
+      "Stochastic Calculus": [],
+      "Mathematical Epidemiology": [],
+      "Homotopy Type Theory": []
+    }
+  },
+  "Physics / Space / Energy": {
+    "Theoretical & Experimental Physics": {
+      "Gravitational Wave Detection": [],
+      "Plasma Physics": [],
+      "High-Energy Particle Physics": [],
+      "Quantum Optics": [],
+      "Nano-Photonics": [],
+      "Cryogenics and Superconductivity": [],
+      "Fusion Reactor Design": ["Tokamak"],
+      "Dark Matter & Dark Energy Models": [],
+      "Astronomy Image Analysis": []
+    }
+  },
+  "Chemistry / Materials Science": {
+    "Chemical & Nano Innovations": {
+      "Quantum Chemistry": [],
+      "Green Chemistry": [],
+      "Photocatalysis": [],
+      "Electrochemical Sensors": [],
+      "Supercapacitors": [],
+      "2D Materials": ["Graphene", "MXenes"],
+      "Smart Polymers": [],
+      "Biodegradable Plastics": []
+    }
+  },
+  "Biology / BioTech / Biomedical": {
+    "Biotech & Medical Engineering": {
+      "CRISPR & Gene Editing": [],
+      "Synthetic Biology": [],
+      "Tissue Engineering": [],
+      "Bioprinting": ["3D printed organs"],
+      "Neural Signal Processing": [],
+      "Wearable Biosensors": [],
+      "Cancer Genomics": [],
+      "Metagenomics": []
+    }
+  },
+  "Psychology / Cognitive Science / Neuroscience": {
+    "Mind & Behavior Research": {
+      "AI in Emotion Recognition": [],
+      "Behavioral Economics": [],
+      "Computational Neuroscience": [],
+      "Brain Mapping Projects": [],
+      "Psychoacoustics": [],
+      "Dream Research & Sleep Pattern Analysis": [],
+      "Addiction Neuropsychology": []
+    }
+  },
+  "Sociology / Humanities / Political Science": {
+    "Technology & Society": {
+      "AI in Political Analysis": [],
+      "Hate Speech Detection": [],
+      "Election Misinformation Networks": [],
+      "Digital Anthropology": [],
+      "Cyber Law & Ethics": [],
+      "Tech in Rural Development": []
+    }
+  },
+  "Commerce / Finance / Marketing": {
+    "FinTech & Market Analytics": {
+      "Blockchain-based Voting": [],
+      "AI for Market Basket Analysis": [],
+      "Behavioral Finance": [],
+      "Credit Risk Modeling": [],
+      "Quantitative Trading Algorithms": [],
+      "Voice Commerce": ["Voice-based Shopping AI"]
+    }
+  },
+  "Other Emerging / Cross-Disciplinary Domains": {
+    "Interdisciplinary Applications": {
+      "Computational Fluid Dynamics (CFD) for Biomedical Devices": [],
+      "Space Mining Technology": [],
+      "AI-Driven Agriculture": ["Smart Irrigation", "Crop Health"],
+      "Brain-Inspired Computing": ["Neuromorphic Chips"],
+      "Digital Fashion & Virtual Clothing Try-On": [],
+      "Fake News and Deepfake Detection": [],
+      "AI Ethics and Bias Auditing": [],
+      "AI for Disaster Prediction & Recovery": [],
+      "AI in Literature & Creative Writing": []
+    }
+  }
+}

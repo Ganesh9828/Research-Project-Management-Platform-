@@ -1,0 +1,41 @@
+@startuml
+class User {
+    +String fullName
+    +String email
+    +String password
+    +String role
+}
+
+class Appointment {
+    +String id
+    +String teacherId
+    +String studentId
+    +Date date
+}
+
+class Completion {
+    +String userId
+    +String courseId
+    +Date completionDate
+    +String status
+}
+
+class Course {
+    +String id
+    +String title
+    +String description
+}
+
+class Engagement {
+    +String userId
+    +String courseId
+    +Number engagementTime
+    +Date engagementDate
+}
+
+User "1" -- "0..*" Appointment : has
+User "1" -- "0..*" Completion : completes
+User "1" -- "0..*" Engagement : engages
+Course "1" -- "0..*" Completion : has
+Course "1" -- "0..*" Engagement : has
+@enduml

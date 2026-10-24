@@ -1,0 +1,35 @@
+Level-0 DFD for AcadSify Application
+
+[External Entities]
+1. Student
+2. Teacher
+3. Admin
+
+[Processes]
+1. Authentication System
+2. Appointment Management
+3. Assignment Management
+4. Meeting Management
+5. Notification System
+6. Analytics System
+
+[Data Stores]
+1. User Database
+2. Appointment Database
+3. Assignment Database
+4. Meeting Database
+5. Notification Database
+6. Analytics Database
+
+[Data Flows]
+1. Student -> Authentication System -> User Database
+2. Teacher -> Authentication System -> User Database
+3. Admin -> Authentication System -> User Database
+4. Student -> Appointment Management -> Appointment Database
+5. Teacher -> Appointment Management -> Appointment Database
+6. Student -> Assignment Management -> Assignment Database
+7. Teacher -> Assignment Management -> Assignment Database
+8. Student -> Meeting Management -> Meeting Database
+9. Teacher -> Meeting Management -> Meeting Database
+10. Notification System -> Student/Teacher/Admin
+11. Analytics System -> Admin

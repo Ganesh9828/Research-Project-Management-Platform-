@@ -1,0 +1,63 @@
+%% Level-0 DFD
+graph TD;
+    A[Admin] -->|Maps, Assigns, Manages| P[0.0 Acadsify System];
+    B[Teacher] -->|Guides, Accepts/Deny Requests| P;
+    C[Student] -->|Requests, Enrolls, Works on Research| P;
+    D[Database] -->|Stores Profiles, Projects, Meetings| P;
+    E[Email System] -->|Sends & Receives Notifications| P;
+    F[Zoom API] -->|Schedules & Retrieves Meetings| P;
+
+%% Level-1 DFD
+graph TD;
+    subgraph Acadsify_System
+        A1[0.1 User Authentication] -->|Login/Register| D[0.1.1 User Database];
+        A2[0.2 Profile Management] -->|Updates Profiles| D;
+        A3[0.3 Course Management] -->|Handles Course Data| D;
+        A4[0.4 Research Mapping] -->|Matches & Suggests Students| D;
+        A5[0.5 Appointment System] -->|Manages Meeting Requests| D;
+        A6[0.6 Notification System] -->|Sends & Receives Status Updates| E[0.6.1 Email System];
+        A7[0.7 Online Meeting System] -->|Schedules & Retrieves Meetings| F[0.7.1 Zoom API];
+        A8[0.8 Admin Control Panel] -->|Handles User & Mapping Data| D;
+    end;
+
+    A[Admin] -->|Controls, Assigns Mapping, Manages Courses| A8;
+    B[Teacher] -->|Mentors, Accepts/Deny Requests| A3;
+    B -->|Matches with Students| A4;
+    C[Student] -->|Enrolls, Requests Mentorship| A3;
+    C -->|Searches Teacher/Interest| A4;
+    C -->|Joins & Schedules Zoom Meetings| A7;
+
+%% Level-2 DFD
+graph TD;
+    subgraph Course_Management
+        CM1[0.3.1 Teacher Creates Course] --> CM2[0.3.2 Student Enrolls];
+        CM2 --> CM3[0.3.3 Assignment Submission];
+        CM3 --> CM4[0.3.4 Teacher Evaluates];
+        CM4 --> CM5[0.3.5 Student Gets Grades];
+    end;
+
+    subgraph Research_Mapping
+        RM1[0.4.1 Admin Matches Students & Teachers] --> RM2[0.4.2 Interest Matching Algorithm];
+        RM2 --> RM3[0.4.3 Suggested Teacher List to Student];
+        RM3 --> RM4[0.4.4 Student Selects Teacher];
+        RM4 --> RM5[0.4.5 Admin Finalizes Mapping];
+    end;
+
+    subgraph Appointment_System
+        AP1[0.5.1 Student Searches Teacher by Name/Domain] --> AP2[0.5.2 Sends Appointment Request];
+        AP2 --> AP3[0.5.3 Teacher Responds];
+        AP3 --> AP4[0.5.4 Meeting Scheduled];
+        AP3 --> AP5[0.5.5 Suggests New Time];
+    end;
+
+    subgraph Communication_Notifications
+        CN1[0.6.1 New Appointment Request] --> CN2[0.6.2 Email & In-App Notification];
+        CN2 --> CN3[0.6.3 Teacher Receives Notification];
+        CN3 --> CN4[0.6.4 Accepts/Deny & Notifies Student];
+    end;
+
+    C[Student] --> CM2;
+    B[Teacher] --> CM1;
+    A[Admin] --> RM1;
+    C --> AP1;
+    B --> AP3;
